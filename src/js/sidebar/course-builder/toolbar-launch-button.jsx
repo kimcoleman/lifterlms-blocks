@@ -18,9 +18,16 @@ const buttonId = 'llms-launch-course-builder-top-button';
  *               WordPress is installed in a subdirectory.
  */
 export const addToolbarLaunchButton = () => {
-	const editPostHeaderToolbarLeft = document.getElementsByClassName(
+	let editPostHeaderToolbarLeft = document.getElementsByClassName(
 		'edit-post-header-toolbar__left'
 	)[ 0 ];
+
+	if ( ! editPostHeaderToolbarLeft ) {
+		// Post WP 6.5 area
+		editPostHeaderToolbarLeft = document.getElementsByClassName(
+			'editor-document-tools__left'
+		)[ 0 ];
+	}
 
 	if ( ! editPostHeaderToolbarLeft ) {
 		return;

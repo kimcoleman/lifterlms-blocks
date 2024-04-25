@@ -1,0 +1,5 @@
+significance: patch
+type: fixed
+links:
+  - "#220"
+entry: Re-adds the Launch Course Builder button to the top of the Course Edit page.
