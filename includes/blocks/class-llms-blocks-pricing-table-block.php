@@ -48,7 +48,6 @@ class LLMS_Blocks_Pricing_Table_Block extends LLMS_Blocks_Abstract_Block {
 	public function add_hooks( $attributes = array(), $content = '' ) {
 
 		add_action( $this->get_render_hook(), array( $this, 'output' ), 10 );
-
 	}
 
 	/**
@@ -91,7 +90,7 @@ class LLMS_Blocks_Pricing_Table_Block extends LLMS_Blocks_Abstract_Block {
 			if ( $id ) {
 				$product = new LLMS_Product( $id );
 				if ( ! $product->get_access_plans() ) {
-					echo '<p>' . __( 'No access plans found.', 'lifterlms' ) . '</p>';
+					echo '<p>' . esc_html__( 'No access plans found.', 'lifterlms' ) . '</p>';
 				}
 			}
 
@@ -120,9 +119,8 @@ class LLMS_Blocks_Pricing_Table_Block extends LLMS_Blocks_Abstract_Block {
 		remove_filter( 'llms_product_is_purchasable', '__return_true' );
 
 		if ( $block_content ) {
-			echo $block_content;
+			echo wp_kses_post( $block_content );
 		}
-
 	}
 }
 

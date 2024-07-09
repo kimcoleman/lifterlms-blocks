@@ -1,6 +1,14 @@
 LifterLMS Blocks Changelog
 ==========================
 
+v2.5.5 - 2024-07-09
+-------------------
+
+##### Security Fixes
+
++ Adds additional security checks and escaping.
+
+
 v2.5.4 - 2024-04-25
 -------------------
 
