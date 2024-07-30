@@ -1,0 +1,3 @@
+significance: patch
+type: fixed
+entry: Avoids breaking the output of certain blocks that contain forms.
