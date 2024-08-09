@@ -1,6 +1,14 @@
 LifterLMS Blocks Changelog
 ==========================
 
+v2.5.7 - 2024-08-09
+-------------------
+
+##### Bug Fixes
+
++ Fixed issues with featured video thumbnails.
+
+
 v2.5.6 - 2024-07-30
 -------------------
 
